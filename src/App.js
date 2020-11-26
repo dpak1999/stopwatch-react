@@ -64,15 +64,17 @@ const App = () => {
 
   return (
     <div className="App">
-      Stopwatch app
-      <Display time={time} />
-      <Button
-        status={status}
-        resume={resumeClock}
-        reset={resetClock}
-        pause={pauseClock}
-        start={startClock}
-      />
+      <span className="App">Stopwatch app</span>
+      <div className="elements">
+        <Display time={time} />
+        <Button
+          status={status}
+          resume={resumeClock}
+          reset={resetClock}
+          pause={pauseClock}
+          start={startClock}
+        />
+      </div>
     </div>
   );
 };

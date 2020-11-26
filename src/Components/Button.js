@@ -1,4 +1,5 @@
 import React from "react";
+import "./components.css";
 
 function BtnComponent(props) {
   return (
@@ -6,20 +7,34 @@ function BtnComponent(props) {
     // started = 1
     // stopped = 2
     <div>
-      {props.status === 0 ? <button onClick={props.start}>Start</button> : ""}
+      {props.status === 0 ? (
+        <button className="btn" onClick={props.start}>
+          Start
+        </button>
+      ) : (
+        ""
+      )}
 
       {props.status === 1 ? (
         <div>
-          <button onClick={props.pause}>Stop</button>
-          <button onClick={props.reset}>Reset</button>
+          <button className="btn" onClick={props.pause}>
+            Pause
+          </button>
+          <button className="btn" onClick={props.reset}>
+            Reset
+          </button>
         </div>
       ) : (
         ""
       )}
       {props.status === 2 ? (
         <div>
-          <button onClick={props.resume}>Resume</button>
-          <button onClick={props.reset}>Reset</button>
+          <button className="btn" onClick={props.resume}>
+            Resume
+          </button>
+          <button className="btn" onClick={props.reset}>
+            Reset
+          </button>
         </div>
       ) : (
         ""
