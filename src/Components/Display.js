@@ -1,23 +1,11 @@
 import React from "react";
 
-const Display = (props) => {
+const Display = ({ time: { hours, minutes, seconds } }) => {
   return (
     <div>
-      <span>
-        {props.time.hours >= 10 ? props.time.hours : "0" + props.time.hours}
-      </span>
-      :
-      <span>
-        {props.time.minutes >= 10
-          ? props.time.minutes
-          : "0" + props.time.minutes}
-      </span>
-      :
-      <span>
-        {props.time.seconds >= 10
-          ? props.time.seconds
-          : "0" + props.time.seconds}
-      </span>
+      <span>{hours >= 10 ? hours : "0" + hours}</span>:
+      <span>{minutes >= 10 ? minutes : "0" + minutes}</span>:
+      <span>{seconds >= 10 ? seconds : "0" + seconds}</span>
     </div>
   );
 };

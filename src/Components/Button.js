@@ -1,38 +1,38 @@
 import React from "react";
 import "./components.css";
 
-function BtnComponent(props) {
+const Button = ({ status, start, pause, resume, reset }) => {
   return (
     // Not started = 0
     // started = 1
     // stopped = 2
     <div>
-      {props.status === 0 ? (
-        <button className="btn" onClick={props.start}>
+      {status === 0 ? (
+        <button className="btn" onClick={start}>
           Start
         </button>
       ) : (
         ""
       )}
 
-      {props.status === 1 ? (
+      {status === 1 ? (
         <div>
-          <button className="btn" onClick={props.pause}>
+          <button className="btn" onClick={pause}>
             Pause
           </button>
-          <button className="btn" onClick={props.reset}>
+          <button className="btn" onClick={reset}>
             Reset
           </button>
         </div>
       ) : (
         ""
       )}
-      {props.status === 2 ? (
+      {status === 2 ? (
         <div>
-          <button className="btn" onClick={props.resume}>
+          <button className="btn" onClick={resume}>
             Resume
           </button>
-          <button className="btn" onClick={props.reset}>
+          <button className="btn" onClick={reset}>
             Reset
           </button>
         </div>
@@ -41,6 +41,6 @@ function BtnComponent(props) {
       )}
     </div>
   );
-}
+};
 
-export default BtnComponent;
+export default Button;
